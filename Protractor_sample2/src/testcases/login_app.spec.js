@@ -1,5 +1,5 @@
 describe('to login to Pitchflow applicaton', function () {
-    var login = require("../page-objects/login-page.po.js");
+    var login = require("../page-objects/login-page.page.js");
     var datav=require("../data_files/project_data.js");
 
     beforeEach(function()
@@ -17,6 +17,7 @@ describe('to login to Pitchflow applicaton', function () {
             login.setPassword(datav.datadrive.password);
             login.submitClick();
         });
+       // browser.waitForAngularEnabled(true);
         expect(login.getTitle()).toContain(datav.datadrive.pagetitle);
     }, 60000);
 

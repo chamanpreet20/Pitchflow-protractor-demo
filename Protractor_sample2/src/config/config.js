@@ -1,4 +1,4 @@
-//const { SpecReporter } = require('jasmine-spec-reporter');
+const { SpecReporter } = require('jasmine-spec-reporter');
 var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
 exports.config = {
   specs: ['../testcases/login_app_spec.js','../testcases/create_project_spec.js'],
@@ -6,7 +6,7 @@ exports.config = {
   //specs: ['../testcases/*spec.js'],
 
     framework: 'jasmine',
-
+    
 /* to set a single browser for execution
     capabilities: {
       'browserName':'firefox',
@@ -53,7 +53,7 @@ to execute scripts on same browser with multiple instances.
             showQuickLinks: true
               })
             );
-            //jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
+            jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
           },
 
    /*onComplete:function()

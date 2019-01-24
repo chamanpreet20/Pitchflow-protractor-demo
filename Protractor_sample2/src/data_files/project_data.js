@@ -3,7 +3,7 @@ module.exports.datadrive=
         urllink:"project/details",
         username:"cs_user@mypresentation.space",
 		password:"!evalu3",
-        name:"auto1",
+        name:"auto6",
         formpage1:"test1",
         formpage2:"test2",
         Urllink1:"project/presentation/",

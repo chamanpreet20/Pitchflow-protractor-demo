@@ -75,7 +75,7 @@ this.buildProject=async function()
     var okbtn=(element.all(by.css("div[class='row']")).get(6)).element(by.buttonText('OK'));
     await okbtn.click();
     //await (this.dialogbox).OKbuttontest.click();
-    browser.sleep(4000);
+   // browser.sleep(4000);
 }
 };
 module.exports=new CreateProject();

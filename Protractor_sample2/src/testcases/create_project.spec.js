@@ -1,6 +1,6 @@
 describe('to create new Pitchflow project', function () {
-    var createproject = require("../page-objects/create-project.po.js");
-    var login = require("../page-objects/login-page.po.js");
+    var createproject = require("../page-objects/create-project.page.js");
+    var login = require("../page-objects/login-page.page.js");
     var datav=require("../data_files/project_data.js");
     
   /*  beforeEach(function()
@@ -42,6 +42,9 @@ describe('to create new Pitchflow project', function () {
             var EC4 = protractor.ExpectedConditions;
             browser.wait(EC4.elementToBeClickable(createproject.buildproject1), 1500);
             createproject.buildProject();
+            browser.sleep(8000);
+            debugger;
+            expect(browser.getCurrentUrl()).toContain(datav.datadrive.Urllink1);
         });
     });
        
