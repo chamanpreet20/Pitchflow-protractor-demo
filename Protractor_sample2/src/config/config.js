@@ -1,8 +1,7 @@
 const { SpecReporter } = require('jasmine-spec-reporter');
 var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
 exports.config = {
-  specs: ['../testcases/login_app.spec.js'],
-  //,'../testcases/create_project.spec.js'],
+  specs: ['../testcases/login_app.spec.js','../testcases/create_project.spec.js'],
   
   //specs: ['../testcases/*spec.js'],
 
