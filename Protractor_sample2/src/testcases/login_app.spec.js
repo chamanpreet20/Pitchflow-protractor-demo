@@ -9,7 +9,7 @@ describe('to login to Pitchflow applicaton', function () {
        
     });
 
-    it('login to an application',function () {  //login to a application by entering a username and password
+    xit('login to an application',function () {  //login to a application by entering a username and password
         browser.waitForAngularEnabled(false);
         var EC = protractor.ExpectedConditions;
         var buttonClickable = EC.elementToBeClickable(login.userName);
