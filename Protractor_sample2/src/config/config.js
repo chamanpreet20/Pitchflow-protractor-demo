@@ -1,10 +1,12 @@
 const { SpecReporter } = require('jasmine-spec-reporter');
 var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
 exports.config = {
-  specs: ['../testcases/login_app_spec.js','../testcases/create_project_spec.js'],
+  specs: ['../testcases/login_app.spec.js','../testcases/create_project.spec.js'],
   
   //specs: ['../testcases/*spec.js'],
 
+ // SELENIUM_PROMISE_MANAGER: false,
+  
     framework: 'jasmine',
     
 /* to set a single browser for execution

@@ -18,9 +18,9 @@ describe('to create new Pitchflow project', function () {
     });*/
 
     it('clicking on new project button', function () {      //To click on New Project button
-       // browser.waitForAngularEnabled(false);
+      //  browser.waitForAngularEnabled(false);
         browser.driver.sleep(1000);
-        browser.waitForAngular();
+       // browser.waitForAngular();
         createproject.clickLinktext();
         expect(createproject.getCurrentUrl()).toContain(datav.datadrive.urllink);
     }, 60000);
@@ -43,43 +43,8 @@ describe('to create new Pitchflow project', function () {
             browser.wait(EC4.elementToBeClickable(createproject.buildproject1), 1500);
             createproject.buildProject();
             browser.sleep(8000);
-            debugger;
+            //debugger;
             expect(browser.getCurrentUrl()).toContain(datav.datadrive.Urllink1);
         });
     });
-       
-           /* var EC4 = protractor.ExpectedConditions;
-            browser.wait(EC4.elementToBeClickable(obj.buildproject1), 1500).then(function () {
-                obj.buildproject1.click().then(function () {
-                    obj.dialogbox.element(by.buttonText('OK')).click().then(function () {
-                        var EC2 = protractor.ExpectedConditions;
-                        browser.wait(EC2.urlContains(d.datadrive.Urllink1), 15000).then(function () {
-                            obj.evalueservelogo1.click().then(function () {
-                                var EC3 = protractor.ExpectedConditions;
-                                var buttonClickable2 = EC3.elementToBeClickable(obj.projectName);
-                                browser.wait(buttonClickable2, 15000).then(function () {
-                                    obj.projectDetails.filter(function (item2) {                //On pitchflow homepage i am searching for project which i have created and hitting on it
-                                        return item2.element(by.css("h3[class*='projectName']")).getText().then(function (text123) {
-                                            return text123 == d.datadrive.name
-                                        });
-                                    }).first().click();
-                                });
-                                var EC4 = protractor.ExpectedConditions;
-                                var buttonClickable3 = EC4.elementToBeClickable(obj.projecttitle);
-                                browser.wait(buttonClickable3, 15000).then(function () {
-                                    expect(obj.projecttitle.getText()).toBe(d.datadrive.name)
-                                });
-                            });
-                        });
-                    });
-                });
-            });
-        });
-    }, 60000);*/
-
-   /* afterEach(function () {
-        browser.waitForAngularEnabled(false);
-        createproject.logout.click();
-    });*/
-
 });

@@ -4,20 +4,22 @@ describe('to login to Pitchflow applicaton', function () {
 
     beforeEach(function()
     {
-        login.getURL(datav.datadrive.url);
+        //browser.ignoreSynchronization = true;
+        login.getURL(datav.datadrive.url);  
+       
     });
 
-    it('login to an application', function () {   //login to a application by entering a username and password
+    it('login to an application',function () {  //login to a application by entering a username and password
         browser.waitForAngularEnabled(false);
-       // var LoginPage=new login();
         var EC = protractor.ExpectedConditions;
         var buttonClickable = EC.elementToBeClickable(login.userName);
         browser.wait(buttonClickable, 5000).then(function () {
-            login.setuserName(datav.datadrive.username);
-            login.setPassword(datav.datadrive.password);
-            login.submitClick();
+         login.setuserName(datav.datadrive.username);
+         login.setPassword(datav.datadrive.password);
+         login.submitClick();
+        browser.sleep(6000);
+           // browser.waitForAngularEnabled(true)
         });
-       // browser.waitForAngularEnabled(true);
         expect(login.getTitle()).toContain(datav.datadrive.pagetitle);
     }, 60000);
 
