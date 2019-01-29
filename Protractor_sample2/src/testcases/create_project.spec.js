@@ -2,20 +2,6 @@ describe('to create new Pitchflow project', function () {
     var createproject = require("../page-objects/create-project.page.js");
     var login = require("../page-objects/login-page.page.js");
     var datav=require("../data_files/project_data.js");
-    
-  /*  beforeEach(function()
-    {
-        login.getURL(datav.datadrive.url);
-        browser.waitForAngularEnabled(false);
-        // var LoginPage=new login();
-         var EC = protractor.ExpectedConditions;
-         var buttonClickable = EC.elementToBeClickable(login.userName);
-         browser.wait(buttonClickable, 5000).then(function () {
-            login.setuserName(datav.datadrive.username);
-            login.setPassword(datav.datadrive.password);
-            login.submitClick();
-         });
-    });*/
 
     it('clicking on new project button', function () {      //To click on New Project button
       //  browser.waitForAngularEnabled(false);
